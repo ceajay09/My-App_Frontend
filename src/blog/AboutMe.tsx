@@ -60,7 +60,7 @@ export default function AboutMe() {
                   <span>Based in:</span>
                   <span>Basel, Switzerland</span>
                 </Typography>
-                <Button
+                <Button //TODO: Try catch
                   variant="contained"
                   startIcon={<DownloadIcon />}
                   component="a"
