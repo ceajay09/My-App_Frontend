@@ -9,13 +9,10 @@ export const Register = (props) => {
     const [company, setCompany] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
 
-        // Hier wird die Fetch-Anfrage ausgeführt, um die Registrierungsdaten an das Backend zu senden
         fetch('http://localhost:8080/api/register', {
             method: 'POST',
             body: JSON.stringify({ email, password, firstName, lastName, company, phoneNumber }),
@@ -31,13 +28,11 @@ export const Register = (props) => {
             })
             .then(data => {
                 console.log('Registration successful:', data);
-                // Hier können Sie die weitere Logik ausführen, z. B. den Benutzer zur Login-Seite weiterleiten
                 props.onFormSwitch('login')
                 handleReset()
             })
             .catch(error => {
                 console.error('Registration failed. User already exists:', error);
-                // Hier können Sie Fehler behandeln, z. B. eine Fehlermeldung anzeigen
                 alert('Registration failed. User ' + '"' + email + '"' + ' already exists');
             });
 

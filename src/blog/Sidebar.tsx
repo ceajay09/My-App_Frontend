@@ -10,7 +10,7 @@ interface SidebarProps {
   social: ReadonlyArray<{
     icon: React.ElementType;
     name: string;
-    url: string;  //wurde von mir hinzugefügt
+    url: string; 
   }>;
   title: string;
 }

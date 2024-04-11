@@ -18,10 +18,9 @@ export const Dashboard = ({ onLogout, onFormSwitch, userInfo }) => {
         handleReset()
         const token = localStorage.getItem('token');
 
-        // Fetch-Anfrage mit dem Token als Header
         fetch('http://localhost:8080/api/dashboard', {
             headers: {
-                Authorization: `Bearer ${token}` // Token als Bearer-Token im Header senden
+                Authorization: `Bearer ${token}` 
             }
         })
             .then(response => {
@@ -31,13 +30,6 @@ export const Dashboard = ({ onLogout, onFormSwitch, userInfo }) => {
                 return response.json();
             })
             .then(data => {
-                // Hier können Sie die Daten aus der Response weiterverarbeiten
-                // localStorage.setItem('token', data.token);
-                // localStorage.setItem('email', data.email);
-                // localStorage.setItem('firstName', data.firstName);
-                // localStorage.setItem('lastName', data.lastName);
-                // localStorage.setItem('company', data.company);
-                // localStorage.setItem('phoneNumber', data.phoneNumber);
                 setEmail(data.email);
                 setFirstName(data.firstName);
                 setLastName(data.lastName);
@@ -47,13 +39,12 @@ export const Dashboard = ({ onLogout, onFormSwitch, userInfo }) => {
 
             })
             .catch(error => {
-                // Hier können Sie Fehlerbehandlung durchführen
                 console.error('Error:', error);
             });
 
         fetch('http://localhost:8080/api/videoData', {
             headers: {
-                Authorization: `Bearer ${token}` // Token als Bearer-Token im Header senden
+                Authorization: `Bearer ${token}` 
             }
         })
             .then(response => {
@@ -67,19 +58,11 @@ export const Dashboard = ({ onLogout, onFormSwitch, userInfo }) => {
 
             })
             .catch(error => {
-                // Hier können Sie Fehlerbehandlung durchführen
                 console.error('Error:', error);
             });
     }
 
-
-
-
     const handleLogout = () => {
-        // Hier können Sie die Logik für die Abmeldung ausführen, z. B. das Löschen des Tokens aus dem Local Storage
-        // console.log("Token : " + localStorage.getItem('token'))
-        // localStorage.removeItem('token');
-        // console.log("Token entfernt (null): " + localStorage.getItem('token'))
         sendLogout();
         onLogout();
     };
@@ -106,7 +89,6 @@ export const Dashboard = ({ onLogout, onFormSwitch, userInfo }) => {
         setPhoneNumber('');
     };
 
-
     return (
         <>
             {currentForm === "UserSettings" ? (
@@ -131,7 +113,6 @@ export const Dashboard = ({ onLogout, onFormSwitch, userInfo }) => {
                         <input type="text" id="video" name="video" value={phoneNumber} readOnly />
                         <video src="Streaming\demo\src\main\resources\videos" width="720" height="480" controls preload="none"></video>
                     </form>
-                    {/* <button onClick={() => { toggleForm("UserSettings"); getUserData() }}>Update User Info</button> */}
                     <button onClick={() => toggleForm("UserSettings")}>Update User Info</button>
                     <button onClick={() => toggleForm("Stream")}>Stream</button>
                     <button onClick={() => toggleForm("changePassword")}>Change Password</button>

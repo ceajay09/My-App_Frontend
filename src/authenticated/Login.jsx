@@ -2,17 +2,15 @@ import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 export const Login = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
 
     const handleSubmit = (e) => {  //
-        e.preventDefault(); //wenn Seite neu geladen wird, verliert ansonsten die informationen
+        e.preventDefault(); 
         console.log(email);
 
-        // Hier wird die Fetch-Anfrage ausgeführt, um die Registrierungsdaten an das Backend zu senden
         fetch('http://localhost:8080/api/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
@@ -28,20 +26,15 @@ export const Login = (props) => {
             })
             .then(data => {
                 console.log('Login successful:', data);
-                // Hier können Sie die weitere Logik ausführen, z. B. den Benutzer zur Dashboard-Seite weiterleiten
                 localStorage.clear();
                 localStorage.setItem('token', data.token);
 
-
-                alert("token: " + localStorage.getItem('token')); // Token im Local Storage speichern
+                alert("token: " + localStorage.getItem('token')); 
                 props.handleLogin()
-                // Wenn der Benutzer angemeldet ist, wechsle zur Dashboard-Seite
-
 
             })
             .catch(error => {
                 console.error('Login failed. User or password not correct:', error);
-                // Hier können Sie Fehler behandeln, z. B. eine Fehlermeldung anzeigen
                 alert('Login failed. Please check your email and password.');
             });
     }

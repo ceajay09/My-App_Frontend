@@ -17,7 +17,7 @@ const sections = [
   { title: 'About This Website', url: '/aboutThisWebsite' },
   { title: 'Tech Insights (Coming soon)', url: '/techInsights' },
   { title: 'Latest Posts (Coming soon)', url: '/latestPosts' },
-  { title: 'Contact Me', url: '/contactMe' },
+  { title: 'Contact Me (Coming soon)', url: '/contactMe' },
   { title: 'Imprint', url: '/imprint' },
 ];
 

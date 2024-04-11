@@ -31,7 +31,6 @@ const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
   description:
     "Multiple lines of text that form the lede, informing new readers quickly and efficiently ",
-  // image: 'https://source.unsplash.com/random?wallpapers',
   image: `${process.env.PUBLIC_URL}/assets/Screenshot-CV-2.png`,
   imageText: 'main image description',
   linkText: 'See full CV...',

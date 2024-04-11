@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import { Container, Grid, Paper, Box, Typography, CssBaseline, ThemeProvider, Button } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
@@ -9,17 +7,6 @@ import DownloadIcon from '@mui/icons-material/Download';
 const theme = createTheme();
 
 export default function AboutMe() {
-  // const fetchData = async () => {
-  //   try {
-  //     // Beispiel-URL, ersetzen Sie diese durch Ihre eigene Anfrage-URL
-  //     const response = await fetch('http://localhost:8080/api/downloadPDF/CV_Jaquiery_Cesar.pdf');
-  //     const data = await response.json();
-  //     console.log(data);
-  //     // Hier könnten Sie die Daten weiterverarbeiten oder den State aktualisieren
-  //   } catch (error) {
-  //     console.error('Es gab ein Problem mit der Fetch-Anfrage:', error);
-  //   }
-  // };
 
   return (
     <Layout>
@@ -29,7 +16,6 @@ export default function AboutMe() {
             About Me
           </Typography>
           <Grid container spacing={3}>
-            {/* Linke Spalte für Foto und Kontaktdaten */}
             <Grid item xs={12} md={5}>
               <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
                 <img src={`${process.env.PUBLIC_URL}/assets/Passfoto.jpg`} alt="Image of myself" style={{ width: '100%', height: 'auto' }} />
@@ -71,9 +57,7 @@ export default function AboutMe() {
                 </Button>
               </Paper>
             </Grid>
-            {/* Rechte Spalte für zusätzliche Informationen */}
             <Grid item xs={12} md={7}>
-              {/* Obere Box/Grid */}
               <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
                 <Typography variant="h6" gutterBottom>Hello, it's me César</Typography>
                 <Typography variant="body1">From a young age, I've been fascinated by the world of software
@@ -95,7 +79,6 @@ export default function AboutMe() {
                   embark on this journey together and explore how we can create innovative solutions
                   that shape the future.</Typography>
               </Paper>
-              {/* Untere Boxen/Grids */}
               <Grid container spacing={2}>
                 <Grid item xs={12} md={8}>
                   <Paper elevation={4} sx={{ p: 2 }}>
@@ -142,6 +125,5 @@ export default function AboutMe() {
         </Container>
       </main>
     </Layout>
-
   );
 }
