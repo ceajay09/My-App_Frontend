@@ -1,5 +1,5 @@
 FROM nginx:stable-alpine
-MAINTAINER mip03
+MAINTAINER cjaquiery
 # Copy static content
 COPY build /usr/share/nginx/html
 
