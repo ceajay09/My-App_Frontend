@@ -58,7 +58,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: frontend-react
-          path: build/
+          #path: build/
 
       - name: Checkout repo
         uses: actions/checkout@v3
