@@ -17,7 +17,7 @@ import Imprint from './Imprint';
 
 interface Post {
   id: string; 
-  title: string;
+  description: string;
 }
 
 interface MainProps {
@@ -57,7 +57,7 @@ export default function Main(props: MainProps) {
       <Divider />
       {posts.map((post) => (
         <Markdown className="markdown" key={post.id}>
-          {post.title}
+          {post.description}
         </Markdown>
       ))}
     </Grid>
