@@ -24,7 +24,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd frontend-app
     - run: npm ci
     - run: npm run build --if-present
 
@@ -47,7 +46,6 @@ jobs:
       
   #    - name: Build the Docker image
   #      uses: actions/checkout@v3
-  #    - run: cd frontend-app
   #    - run: docker build . --file Dockerfile --tag frontend:$(date +%s)
      #run: docker publish donoooo
 
