@@ -36,22 +36,22 @@ jobs:
           frontend-app/build/*
   
   
-  dockerize:
-    needs: build-react
-    runs-on: ubuntu-latest
-    steps:
-     - name: Download math result for job 1
-       uses: actions/download-artifact@v4
-       with:
-          name: frontend-react
+  # dockerize:
+  #   needs: build-react
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #    - name: Download math result for job 1
+  #      uses: actions/download-artifact@v4
+  #      with:
+  #         name: frontend-react
       
-     - name: Build the Docker image
-       uses: actions/checkout@v3
-     - run: cd frontend-app
-     - run: docker build . --file Dockerfile --tag frontend:$(date +%s)
+  #    - name: Build the Docker image
+  #      uses: actions/checkout@v3
+  #    - run: cd frontend-app
+  #    - run: docker build . --file Dockerfile --tag frontend:$(date +%s)
      #run: docker publish donoooo
 
-    push-to-aws:
+  push-to-aws:
     needs: build-react
     runs-on: ubuntu-latest
     steps:
