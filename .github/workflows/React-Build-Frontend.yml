@@ -32,7 +32,7 @@ jobs:
       with:
         name: frontend-react
         path: |
-          frontend-app/build/*
+          build/*
   
   
   # dockerize:
