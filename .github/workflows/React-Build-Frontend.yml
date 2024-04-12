@@ -37,7 +37,12 @@ jobs:
     needs: build-react
     runs-on: ubuntu-latest
     steps:
-          # Dieser Schritt lädt das Artefakt herunter und extrahiert es in das Arbeitsverzeichnis des Jobs
+      
+      - name: Run List Files
+        run: |
+          ls -la
+          ls -la ./build/
+
       - name: Download Frontend Build Artefact
         uses: actions/download-artifact@v4
         with:
