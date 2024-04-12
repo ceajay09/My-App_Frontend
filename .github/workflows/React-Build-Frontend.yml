@@ -76,7 +76,7 @@ jobs:
         run: |
           ls -la
           ls -la build/*
-          chown -r 777 build
+          chown -R 777 build
           echo $REGISTRY/$REPOSITORY:$IMAGE_TAG
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
