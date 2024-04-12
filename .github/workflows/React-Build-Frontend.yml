@@ -84,6 +84,9 @@ jobs:
           IMAGE_TAG: dev # oder ${{ github.sha }} für ein dynamisches Tag
         run: echo "$REGISTRY/$REPOSITORY:$IMAGE_TAG"
     
+      - name: Run List Files
+        run: ls
+        
       - name: Build Docker Image
         env:
           REPOSITORY: my-app_frontend
