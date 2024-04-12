@@ -32,7 +32,7 @@ jobs:
       with:
         name: frontend-react
         path: |
-          build/*
+          build
   
   
   # dockerize:
@@ -86,7 +86,7 @@ jobs:
     
       - name: Run List Files
         run: ls
-        
+
       - name: Build Docker Image
         env:
           REPOSITORY: my-app_frontend
