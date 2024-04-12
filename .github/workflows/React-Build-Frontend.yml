@@ -42,7 +42,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: frontend-react
-          path: ./build
+          path: /build
       
       - name: Run List Files
         run: |
@@ -74,7 +74,10 @@ jobs:
         run: echo "$REGISTRY/$REPOSITORY:$IMAGE_TAG"
     
       - name: Run List Files
-        run: ls
+        run: |
+          ls
+          pwd
+          ls -la
 
       - name: Build Docker Image
         env:
