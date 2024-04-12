@@ -27,27 +27,12 @@ jobs:
     - run: npm ci --legacy-peer-deps
     - run: CI=false npm run build --if-present #Check warnings
 
-    - name: Archive Frontend
+    - name: Archive Frontend Build Artefact
       uses: actions/upload-artifact@v4
       with:
         name: frontend-react
         path: |
-          build
-  
-  
-  # dockerize:
-  #   needs: build-react
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #    - name: Download math result for job 1
-  #      uses: actions/download-artifact@v4
-  #      with:
-  #         name: frontend-react
-      
-  #    - name: Build the Docker image
-  #      uses: actions/checkout@v3
-  #    - run: docker build . --file Dockerfile --tag frontend:$(date +%s)
-     #run: docker publish donoooo
+          build/
 
   push-to-aws:
     needs: build-react
@@ -58,7 +43,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: frontend-react
-          # path: build/
+          path: build/
 
       - name: Checkout repo
         uses: actions/checkout@v3
