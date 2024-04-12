@@ -31,23 +31,23 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: frontend-react
-        path: build
+        path: build/
 
   push-to-aws:
     needs: build-react
     runs-on: ubuntu-latest
     steps:
-      
-      - name: Run List Files
-        run: |
-          ls -la
-          ls -la ./build/
 
       - name: Download Frontend Build Artefact
         uses: actions/download-artifact@v4
         with:
           name: frontend-react
           path: ./build
+      
+      - name: Run List Files
+        run: |
+            ls -la
+            ls -la ./build/
 
       - name: Checkout repo
         uses: actions/checkout@v3
