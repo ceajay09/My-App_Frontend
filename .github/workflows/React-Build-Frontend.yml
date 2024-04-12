@@ -46,8 +46,15 @@ jobs:
       
       - name: Run List Files
         run: |
+            pwd
             ls -la
             ls -la ./build/
+      
+      - name: Build Docker Image
+        env:
+          REPOSITORY: my-app_frontend
+          IMAGE_TAG: dev # oder ${{ github.sha }} für ein dynamisches Tag
+        run: docker build -t $REPOSITORY:$IMAGE_TAG -f Dockerfile .
 
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -79,11 +86,9 @@ jobs:
           pwd
           ls -la
 
-      - name: Build Docker Image
-        env:
-          REPOSITORY: my-app_frontend
-          IMAGE_TAG: dev # oder ${{ github.sha }} für ein dynamisches Tag
-        run: docker build -t $REPOSITORY:$IMAGE_TAG -f Dockerfile .
+
+#docker build
+
       
       - name: Tag Docker Image
         env:
