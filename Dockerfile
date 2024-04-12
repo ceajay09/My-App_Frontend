@@ -1,7 +1,7 @@
 FROM nginx:stable-alpine
 MAINTAINER cjaquiery
-# Copy static content
-COPY build /usr/share/nginx/html
+# Copy static contentla
+COPY ./build /usr/share/nginx/html
 
 #expose only http
 EXPOSE 80
