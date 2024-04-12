@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: frontend-react
-        path: build/
+        path: build
 
   push-to-aws:
     needs: build-react
@@ -42,7 +42,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: frontend-react
-          path: /build
+          path: build
       
       - name: Run List Files
         run: |
