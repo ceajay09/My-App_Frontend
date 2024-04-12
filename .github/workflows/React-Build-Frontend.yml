@@ -43,18 +43,8 @@ jobs:
         with:
           name: frontend-react
           path: build
-      
-      - name: Run List Files
-        run: |
-            pwd
-            ls -la
-            ls -la ./build/
-      
-      - name: Build Docker Image
-        env:
-          REPOSITORY: my-app_frontend
-          IMAGE_TAG: dev # oder ${{ github.sha }} für ein dynamisches Tag
-        run: docker build -t $REPOSITORY:$IMAGE_TAG -f Dockerfile .
+
+
 
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -73,21 +63,18 @@ jobs:
         with:
           registry-type: private
 
-      - name: Echo Docker Image Name
+
+    
+      - run: ls
+
+
+      - name: Build Docker Image
         env:
-          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           REPOSITORY: my-app_frontend
           IMAGE_TAG: dev # oder ${{ github.sha }} für ein dynamisches Tag
-        run: echo "$REGISTRY/$REPOSITORY:$IMAGE_TAG"
-    
-      - name: Run List Files
-        run: |
-          ls
-          pwd
-          ls -la
-
-
-#docker build
+        run: | 
+            pwd
+            docker build -t $REPOSITORY:$IMAGE_TAG -f Dockerfile .
 
       
       - name: Tag Docker Image
