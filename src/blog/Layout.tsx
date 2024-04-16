@@ -27,7 +27,7 @@ const defaultTheme = createTheme();
 let GitHub = {
   name: 'GitHub',
   icon: GitHubIcon,
-  url: 'https://github.com/ceajay09/Webclient.git'
+  url: 'https://github.com/ceajay09'
 }
 
 let LinkedIn = {

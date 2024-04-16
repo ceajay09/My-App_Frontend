@@ -64,7 +64,7 @@ const sidebar = {
   description:
     "28-year-old Business Information FH graduate, deeply fascinated by technology. Always learning, eager to take responsibility and push the boundaries of what's possible.",
   social: [
-    { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/ceajay09/Webclient.git' },
+    { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/ceajay09' },
     { name: 'LinkedIn', icon: LinkedInIcon, url: 'https://linkedin.com/in/cesar-jaquiéry-9215aa179' }
   ],
 };

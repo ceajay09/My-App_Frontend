@@ -27,7 +27,7 @@ export default function Footer(props: FooterProps) {
   const { description, title } = props;
 
   const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com/ceajay09/Webclient.git', Icon: GitHubIcon },
+    { name: 'GitHub', url: 'https://github.com/ceajay09', Icon: GitHubIcon },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/cesar-jaquiéry-9215aa179', Icon: LinkedInIcon },
   ];
 

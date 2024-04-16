@@ -1,0 +1,43 @@
+#version: '3.8'
+services:
+  backend:
+    container_name: backend-dev
+    image: backend-dev
+    build: c:/Users/Cjaqu/intellij_workspace/My-App_Backend
+    volumes:
+      - ./backend:/usr/src/app
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./src/main/resources/environment-variables.env
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    #environment:
+      #DB_USER: ${DB_USER}
+      #DB_PASS: ${DB_PASS}
+      #DB_INSTANCE: ${DB_INSTANCE}
+      #MONGODB_URI: "mongodb+srv://${DB_USER}:${DB_PASS}@${DB_INSTANCE}.pjxdzvf.mongodb.net/?retryWrites=true&w=majority "
+      #MONGODB_URI: "mongodb+srv://cjaquiery:uyMOfIs6BtUwxWRr@mywebapp.pjxdzvf.mongodb.net/?retryWrites=true&w=majority"
+
+      #PROFILE: dev
+
+  frontend:
+    container_name: frontend-dev
+    image: frontend-dev
+    build: c:/Users/Cjaqu/visualStudioCode-projects/My-App_Frontend
+    volumes:
+      - ./frontend:/usr/src/app
+    ports:
+      - "3000:80"
+#    environment:
+#      REACT_APP_BACKEND_URL: http://localhost:8080
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+#    volumes:
+#      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - backend
+      - frontend
