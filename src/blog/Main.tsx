@@ -32,7 +32,7 @@ export default function Main(props: MainProps) {
 
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/getBlogs')
+    fetch('api/getBlogs')
     .then((response) => response.json())
     .then((data) => {
       setPosts(data)
