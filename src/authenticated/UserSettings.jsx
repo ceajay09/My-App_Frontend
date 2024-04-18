@@ -15,7 +15,7 @@ export const UserSettings = ({ onLogout, onFormSwitch, userInfo }) => {
         handleReset()
         const token = localStorage.getItem('token');
 
-        fetch('http://localhost:8080/api/dashboard', {
+        fetch('/api/dashboard', {
             headers: {
                 Authorization: `Bearer ${token}`
             }

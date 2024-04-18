@@ -50,7 +50,7 @@ export default function AboutMe() {
                   variant="contained"
                   startIcon={<DownloadIcon />}
                   component="a"
-                  href="http://localhost:8080/api/downloadPDF/CV_Jaquiery_Cesar.pdf"
+                  href="/api/downloadPDF/CV_Jaquiery_Cesar.pdf"
                   sx={{ marginTop: 2 }}
                 >
                   Download CV

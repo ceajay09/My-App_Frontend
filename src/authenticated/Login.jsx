@@ -11,7 +11,7 @@ export const Login = (props) => {
         e.preventDefault(); 
         console.log(email);
 
-        fetch('http://localhost:8080/api/login', {
+        fetch('/api/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: {

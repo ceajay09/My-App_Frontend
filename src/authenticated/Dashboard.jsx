@@ -18,7 +18,7 @@ export const Dashboard = ({ onLogout, onFormSwitch, userInfo }) => {
         handleReset()
         const token = localStorage.getItem('token');
 
-        fetch('http://localhost:8080/api/dashboard', {
+        fetch('/api/dashboard', {
             headers: {
                 Authorization: `Bearer ${token}` 
             }
@@ -42,7 +42,7 @@ export const Dashboard = ({ onLogout, onFormSwitch, userInfo }) => {
                 console.error('Error:', error);
             });
 
-        fetch('http://localhost:8080/api/videoData', {
+        fetch('/api/videoData', {
             headers: {
                 Authorization: `Bearer ${token}` 
             }

@@ -1,6 +1,6 @@
 export const sendLogout = (props) => {
 
-    fetch('http://localhost:8080/api/logout', {
+    fetch('/api/logout', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

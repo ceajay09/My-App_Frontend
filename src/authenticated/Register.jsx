@@ -13,7 +13,7 @@ export const Register = (props) => {
         e.preventDefault();
         console.log(email);
 
-        fetch('http://localhost:8080/api/register', {
+        fetch('/api/register', {
             method: 'POST',
             body: JSON.stringify({ email, password, firstName, lastName, company, phoneNumber }),
             headers: {
