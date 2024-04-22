@@ -11,12 +11,10 @@ import FeaturedPost from './FeaturedPost';
 import Main from './Main';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-import post1 from './blog-post.1.md';
-import post2 from './blog-post.2.md';
-import post3 from './blog-post.3.md';
 import Imprint from './Imprint';
 import { Link as RouterLink } from 'react-router-dom';
 import Layout from './Layout';
+import { useState } from 'react';
 
 const sections = [
   { title: 'About Me', url: '#' },
@@ -57,8 +55,6 @@ const featuredPosts = [
   },
 ];
 
-const posts = [post1, post2, post3];
-
 const sidebar = {
   title: 'Who I Am',
   description:
@@ -73,6 +69,7 @@ const sidebar = {
 const defaultTheme = createTheme();
 
 export default function Blog() {
+  const [posts, setPosts] = useState([]);
   return (
     <Layout>
       <main>
