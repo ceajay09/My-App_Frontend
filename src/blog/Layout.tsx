@@ -15,9 +15,9 @@ const sections = [
   { title: 'Home', url: '/' },
   { title: 'About Me', url: '/aboutMe' },
   { title: 'About This Website', url: '/aboutThisWebsite' },
-  { title: 'Tech Insights (Coming soon)', url: '/techInsights' },
-  { title: 'Latest Posts (Coming soon)', url: '/latestPosts' },
-  { title: 'Contact Me (Coming soon)', url: '/contactMe' },
+  // { title: 'Tech Insights (Coming soon)', url: '/techInsights' },
+  // { title: 'Latest Posts (Coming soon)', url: '/latestPosts' },
+  // { title: 'Contact Me (Coming soon)', url: '/contactMe' },
   { title: 'Imprint', url: '/imprint' },
 ];
 
