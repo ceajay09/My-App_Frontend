@@ -53,7 +53,7 @@ const featuredPosts = [
       "Newly graduated and passionate about Java, eager for projects and skill growth. Ready to innovate with your team. Let's connect!",
     image: 'https://source.unsplash.com/random?wallpapers', //TODO: New Image
     imageLabel: 'Image Text',
-    url: '/contactMe',
+    url: '/aboutMe',
   },
 ];
 
@@ -62,7 +62,7 @@ const posts = [post1, post2, post3];
 const sidebar = {
   title: 'Who I Am',
   description:
-    "28-year-old Business Information FH graduate, deeply fascinated by technology. Always learning, eager to take responsibility and push the boundaries of what's possible.",
+    "28-year-old Business Information FH graduate interested in technology. I am continuously learning and ready to take on responsibility and explore new opportunities.",
   social: [
     { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/ceajay09' },
     { name: 'LinkedIn', icon: LinkedInIcon, url: 'https://linkedin.com/in/cesar-jaquiéry-9215aa179' }
@@ -92,6 +92,5 @@ export default function Blog() {
         </Grid>
       </main>
     </Layout >
-
   );
 }

@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { error } from 'console';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Imprint from './Imprint'; 
+import { Paper } from '@mui/material'; 
 
 <Router>
   <Routes>
@@ -32,13 +33,14 @@ export default function Main(props: MainProps) {
 
 
   useEffect(() => {
-    fetch('api/getBlogs')
+    fetch(`${process.env.REACT_APP_API_URL}/api/getBlogs`)
     .then((response) => response.json())
     .then((data) => {
       setPosts(data)
       console.log("Succesfully retrieved blogs" + data);
     })
     .catch((error) => {
+      console.error(`${process.env.REACT_APP_API_URL}/api/getBlogs`);
       console.error("Error fetching posts: ", error);
     });
     
@@ -56,9 +58,11 @@ export default function Main(props: MainProps) {
       </Typography>
       <Divider />
       {posts.map((post) => (
-        <Markdown className="markdown" key={post.id}>
+      <Paper elevation={4} sx={{ p: 2, my: 2 }} key={post.id}>
+        <Markdown className="markdown">
           {post.description}
         </Markdown>
+      </Paper>
       ))}
     </Grid>
   );

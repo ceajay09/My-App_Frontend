@@ -60,12 +60,11 @@ export default function AboutMe() {
             <Grid item xs={12} md={7}>
               <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
                 <Typography variant="h6" gutterBottom>Hello, it's me César</Typography>
-                <Typography variant="body1">From a young age, I've been fascinated by the world of software
-                  development, with a particular focus on Java. My experience as a working student in a
-                  leading CDMO company has significantly shaped my understanding of modern technologies
-                  and software development methodologies. This experience, combined with my ongoing commitment
-                  to expanding my knowledge through reading technical books, especially on topics like Design
-                  Patterns, has fueled my passion for the field.with a particular focus on Java.<br />
+                <Typography variant="body1">From a young age, I have been interested in the world of IT. 
+                My experience as a working student at a leading CDMO company helped me enhance my 
+                understanding of modern technologies and process optimization. I continue to broaden my 
+                knowledge by reading technical books, focusing on topics like Design Patterns, which 
+                deepens my interest in the field.<br />
                   <br /></Typography>
                 <Typography variant="body1">My journey in software development is not just about
                   acquiring knowledge; it's about applying what I learn to solve real-world problems.
@@ -113,9 +112,11 @@ export default function AboutMe() {
                   <Paper elevation={4} sx={{ p: 2 }}>
                     <Typography variant="h6" gutterBottom>Interests</Typography>
                     <Typography variant="body2">                      <ul>
-                        <li>Test </li>
-                        <li>Test out </li>
-                        <li>Test</li>
+                        <li>Climbing</li>
+                        <li>Hiking</li>
+                        <li>Water sports</li>
+                        <li>Diving</li>
+                        <li>Motorbike</li>
                       </ul></Typography>
                   </Paper>
                 </Grid>
