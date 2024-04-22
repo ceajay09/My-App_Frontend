@@ -39,7 +39,7 @@ const mainFeaturedPost = {
 const featuredPosts = [
   {
     title: 'My New Website Is Live Now!',
-    date: 'Apr 9',
+    date: 'Apr 22',
     description:
       "I’m excited to launch my new website! Here, I'll share my coding journey, insights on tech innovations, and more. Let’s explore together.",
     image: 'https://source.unsplash.com/random?wallpapers', //TODO: Change image in Screenshot from landing page
@@ -48,7 +48,7 @@ const featuredPosts = [
   },
   {
     title: "Get in Touch: Let's Connect!",
-    date: 'Apr 9',
+    date: 'Apr 22',
     description:
       "Newly graduated and passionate about Java, eager for projects and skill growth. Ready to innovate with your team. Let's connect!",
     image: 'https://source.unsplash.com/random?wallpapers', //TODO: New Image

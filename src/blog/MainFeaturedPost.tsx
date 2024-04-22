@@ -24,7 +24,8 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
       color: '#fff',
       mb: 4,
       overflow: 'hidden',
-      padding: '30px'
+      padding: '30px',
+      textAlign: 'center'
     }}>
       <img src={post.image} alt={post.imageText} style={{
         width: 'auto',

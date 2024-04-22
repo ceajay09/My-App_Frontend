@@ -19,7 +19,7 @@ export default function Imprint() {
               Purpose of the Website
             </Typography>
             <Typography variant="subtitle1" paragraph sx={{ fontStyle: 'italic' }}>
-              This blog is dedicated to providing tips and advice for job applications.
+            This website is designed to offer insights into the construction of the site itself and to introduce you to who I am. 
             </Typography>
           </Paper>
         </Box>
@@ -29,22 +29,22 @@ export default function Imprint() {
               Contact Information
             </Typography>
             <Grid container spacing={2}>
-            <Grid item xs={1}>
+            <Grid item xs={12} sm={3} md={2} lg={1}>
                 <Typography variant="subtitle1" paragraph sx={{ fontStyle: 'italic' }}>
                   Owner:
                 </Typography>
               </Grid>
-              <Grid item xs={11}>
+              <Grid item xs={12} sm={9} md={10} lg={11}>
                 <Typography variant="subtitle1" paragraph sx={{ fontStyle: 'italic' }}>
                   César Jaquiéry
                 </Typography>
               </Grid>
-              <Grid item xs={1}>
+              <Grid item xs={12} sm={3} md={2} lg={1}>
                 <Typography variant="subtitle1" paragraph sx={{ fontStyle: 'italic' }}>
                   Email:
                 </Typography>
               </Grid>
-              <Grid item xs={11}>
+              <Grid item xs={12} sm={9} md={10} lg={11}>
                 <Typography variant="subtitle1" paragraph sx={{ fontStyle: 'italic' }}>
                   c.jaquiery@gmail.com
                 </Typography>
