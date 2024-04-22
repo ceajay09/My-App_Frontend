@@ -40,10 +40,8 @@ export default function Main(props: MainProps) {
       console.log("Succesfully retrieved blogs" + data);
     })
     .catch((error) => {
-      console.error(`${process.env.REACT_APP_API_URL}/api/getBlogs`);
       console.error("Error fetching posts: ", error);
     });
-    
   }, []) 
 
 
