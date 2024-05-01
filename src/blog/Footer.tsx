@@ -40,7 +40,7 @@ export default function Footer(props: FooterProps) {
         <Grid container alignItems="center" justifyContent="center" >
           {/* Linkes Icon */}
           <Grid item xs>
-            <Link href={socialLinks[0].url} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Link href={socialLinks[0].url} target="_blank" sx={{ display: 'flex', justifyContent: 'flex-end' }}>
               {React.createElement(socialLinks[0].Icon, { style: { fontSize: '50px' } })}
             </Link>
           </Grid>
@@ -55,7 +55,7 @@ export default function Footer(props: FooterProps) {
             </Typography>
           </Grid>
           <Grid item xs>
-            <Link href={socialLinks[1].url} sx={{ display: 'flex', justifyContent: 'flex-start' }}>
+            <Link href={socialLinks[1].url} target="_blank" sx={{ display: 'flex', justifyContent: 'flex-start' }}>
               {React.createElement(socialLinks[1].Icon, { style: { fontSize: '50px' } })}
             </Link>
           </Grid>
