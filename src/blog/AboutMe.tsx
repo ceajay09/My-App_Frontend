@@ -71,14 +71,20 @@ export default function AboutMe() {
             <Grid item xs={12} md={7}>
               <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
                 <Typography variant="h6" gutterBottom>Hello, it's me César</Typography>
-                <Typography variant="body1">From a young age, I have been fascinated by the world of IT. 
+                <Typography variant="body1" gutterBottom>
+                How did I begin my tech journey?<br/>
+                </Typography>
+                <Typography variant="body2">From a young age, I have been fascinated by the world of IT. 
                 My experience as a working student at a renowned pharmaceutical company enhanced my 
                 understanding of modern technologies and process optimization, deepening my interest 
                 in the field. During my studies in Business Informatics, where I focused on programming 
                 modules, I actively engaged in practical projects with companies as clients, eagerly 
                 taking on responsibilities and applying theoretical knowledge in real-world settings.<br />
                   <br /></Typography>
-                <Typography variant="body1">This role allowed me to gain valuable experience and expand 
+                  <Typography variant="body1" gutterBottom>
+                  What key skills have I developed?<br/>
+                </Typography>
+                <Typography variant="body2">This role allowed me to gain valuable experience and expand 
                 my understanding of various programming languages through script writing. It also 
                 deepened my interest in IT as I worked at the intersection of business and technology. 
                 During my civil service in IT support, I acquired comprehensive knowledge about diverse 
@@ -87,7 +93,10 @@ export default function AboutMe() {
                 significant insights into how systems can interact and work together under crisis 
                 scenarios.<br/>
                   <br /></Typography>
-                <Typography variant="body1">I regularly engage in private projects to explore new 
+                  <Typography variant="body1" gutterBottom>
+                  What motivates my continuous learning?<br/>
+                </Typography>
+                <Typography variant="body2">I regularly engage in private projects to explore new 
                 technologies and consolidate my existing knowledge, like creating this webpage 
                 using AWS to understand its functionalities in practice. I always strive to extend 
                 my expertise by reading technical books, particularly on topics such as Design Patterns.
@@ -95,7 +104,10 @@ export default function AboutMe() {
                  applying what I learn to solve real-world problems. I am constantly seeking 
                  opportunities to grow professionally and take on responsibilities in specific areas of 
                  expertise.<br/><br/></Typography>
-                 <Typography variant="body1">I am eager to work in dynamic environments that drive 
+                 <Typography variant="body1" gutterBottom>
+                 What are my career goals?<br/>
+                </Typography>
+                 <Typography variant="body2">I am eager to work in dynamic environments that drive 
                  innovation, bringing my technical skills, creativity, and team collaboration 
                  abilities to make a substantial impact. I look forward to contributing to meaningful 
                  projects that propel innovation and make a difference. Let's embark on this journey 
