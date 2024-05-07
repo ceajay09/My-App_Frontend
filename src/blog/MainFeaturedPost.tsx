@@ -28,8 +28,10 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
       textAlign: 'center'
     }}>
       <img src={post.image} alt={post.imageText} style={{
+        maxWidth: '100%', 
         width: 'auto',
-        height: '300px',
+        height: 'auto',    
+        maxHeight: '300px',  
         display: 'block',
         margin: 'auto',
       }} />
