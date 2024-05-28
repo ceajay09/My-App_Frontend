@@ -1,21 +1,38 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Grid, Paper, Box, Typography, CssBaseline, ThemeProvider, Button, Link } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import Layout from './Layout';
 import DownloadIcon from '@mui/icons-material/Download';
-import { useState } from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const theme = createTheme();
 const practicalProjectURL = "https://studierendenprojekte.wirtschaft.fhnw.ch/view/2750"
 const bachelorProjectURL = "https://studierendenprojekte.wirtschaft.fhnw.ch/view/2019"
 
+
 export default function AboutMe() {
+  const { t } = useTranslation();
   const [showNumber, setShowNumber] = useState(false);
+
+  // useEffect(() => {
+  //   const updateContent = () => {
+  //     const outputElement = document.getElementById('output');
+  //     console.log('updateContent called. Output: ' , outputElement);
+  //     if (outputElement) {
+  //       outputElement.innerHTML = i18next.t('key');
+  //     }
+  //   };
+
+  //   i18next.on('languageChanged', () => {
+  //     updateContent();
+  //   });
+  // }, []);
 
   const handleClick = () => {
     setShowNumber(!showNumber);
@@ -26,7 +43,7 @@ export default function AboutMe() {
       <main>
         <Container maxWidth="lg">
           <Typography variant="h3" align="center" paddingTop={2} gutterBottom>
-            About Me
+            {t('aboutMe.title')}
           </Typography>
           <Grid container spacing={3}>
             <Grid item xs={12} md={5}>
@@ -34,18 +51,18 @@ export default function AboutMe() {
                 <img src={`${process.env.PUBLIC_URL}/assets/Passfoto.jpg`} alt="Image of myself" style={{ width: '100%', height: 'auto' }} />
               </Paper>
               <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
-                <Typography variant="h6" gutterBottom>Contact Details</Typography>
+                <Typography variant="h6" gutterBottom>{t('aboutMe.contactDetails')}</Typography>
                 <Typography component="div" variant="body1" sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span>Qualification:</span>
-                  <span>Business Information BSc (FHNW)</span>
+                  <span>{t('aboutMe.qualification')}</span>
+                  <span>{t('aboutMe.qualificationDetail')}</span>
                 </Typography>
                 <Typography component="div" variant="body1" sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span>Age:</span>
+                  <span>{t('aboutMe.age')}</span>
                   <span>28</span>
                 </Typography>
                 <Typography component="div" variant="body1" sx={{ display: 'flex', justifyContent: 'space-between' }}>
                   <Typography variant="body1" component="span">
-                    Phone Number:
+                    {t('aboutMe.phoneNumber')}
                   </Typography>
                   {showNumber ? (
                     <Typography variant="body1" component="span">
@@ -54,33 +71,33 @@ export default function AboutMe() {
                   ) : (
                     <Button onClick={handleClick}>
                       <Typography component="div" variant="body1" sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                        Show Number
+                        {t('aboutMe.showNumber')}
                       </Typography>
                     </Button>
                   )}
                 </Typography>
                 <Typography component="div" variant="body1" sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span>E-Mail:</span>
+                  <span>{t('aboutMe.email')}</span>
                   <Link href="mailto:c.jaquiery@gmail.com">
                     c.jaquiery@gmail.com
                   </Link>
                 </Typography>
                 <Typography component="div" variant="body1" sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span>Based in:</span>
-                  <span>Basel, Switzerland</span>
+                  <span>{t('aboutMe.basedIn')}</span>
+                  <span>{t('aboutMe.basedInDetail')}</span>
                 </Typography>
-                <Button //TODO: Try catch
+                <Button
                   variant="contained"
                   startIcon={<DownloadIcon />}
                   component="a"
                   href="/api/downloadPDF/CV_Jaquiery_Cesar.pdf"
                   sx={{ marginTop: 2 }}
                 >
-                  Download CV
+                  {t('aboutMe.downloadCV')}
                 </Button>
               </Paper>
-              <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
-                <Typography variant="h6" gutterBottom>Interests</Typography>
+              {/* <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
+                <Typography variant="h6" gutterBottom>{t('aboutMe.interests')}</Typography>
                 <Typography variant="body1"><ul>
                   <li>Small private IT projects</li>
                   <li>Climbing</li>
@@ -88,11 +105,22 @@ export default function AboutMe() {
                   <li>Water sports</li>
                   <li>Diving</li>
                 </ul></Typography>
+              </Paper> */}
+              
+              <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
+                <Typography variant="h6" gutterBottom>{t('aboutMe.interests')}</Typography>
+                <Typography variant="body1">
+                  <ul>
+                    {t('aboutMe.interestList').split(', ').map((interest) => (
+                      <li key={interest}>{interest}</li>
+                    ))}
+                  </ul>
+                </Typography>
               </Paper>
             </Grid>
             <Grid item xs={12} md={7}>
               <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
-                <Typography variant="h6" gutterBottom>Hello, it's me César</Typography>
+                <Typography variant="h6" gutterBottom>{t('aboutMe.hello')}</Typography>
                 <Accordion sx={{ p: 0, mb: 2 }}>
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
@@ -100,18 +128,13 @@ export default function AboutMe() {
                     id="panel1-header"
                   >
                     <Typography variant="body1">
-                    How did I begin my tech journey?
+                      {t('aboutMe.techJourney')}
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                  <Typography variant="body2">
-                    From a young age, I have been fascinated by the world of IT.
-                    My experience as a working student at a renowned pharmaceutical company enhanced my
-                    understanding of modern technologies and process optimization, deepening my interest
-                    in the field. During my studies in Business Informatics, where I focused on programming
-                    modules, I actively engaged in practical projects with companies as clients, eagerly
-                    taking on responsibilities and applying theoretical knowledge in real-world settings.<br />
-                  </Typography>
+                    <Typography variant="body2">
+                      {t('aboutMe.techJourneyDetail')}
+                    </Typography>
                   </AccordionDetails>
                 </Accordion>
                 <Accordion sx={{ p: 0, mb: 2 }}>
@@ -121,19 +144,12 @@ export default function AboutMe() {
                     id="panel2-header"
                   >
                     <Typography variant="body1">
-                      What key skills have I developed?
+                      {t('aboutMe.keySkills')}
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography variant="body2">
-                      This role allowed me to gain valuable experience and expand
-                      my understanding of various programming languages through script writing. It also
-                      deepened my interest in IT as I worked at the intersection of business and technology.
-                      During my civil service in IT support, I acquired comprehensive knowledge about diverse
-                      systems and their interactions, further solidifying my technical foundation. This
-                      experience was particularly enriching during a ransomware attack, which provided
-                      significant insights into how systems can interact and work together under crisis
-                      scenarios.
+                      {t('aboutMe.keySkillsDetail')}
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -144,20 +160,13 @@ export default function AboutMe() {
                     id="panel1-header"
                   >
                     <Typography variant="body1">
-                    What motivates my continuous learning?
+                      {t('aboutMe.continuousLearning')}
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                  <Typography variant="body2">
-                  I regularly engage in private projects to explore new
-                  technologies and consolidate my existing knowledge, like creating this webpage
-                  using AWS to understand its functionalities in practice. I always strive to extend
-                  my expertise by reading technical books, particularly on topics such as Design Patterns.
-                  My journey in software development is not just about acquiring knowledge; it's about
-                  applying what I learn to solve real-world problems. I am constantly seeking
-                  opportunities to grow professionally and take on responsibilities in specific areas of
-                  expertise.
-                  </Typography>
+                    <Typography variant="body2">
+                      {t('aboutMe.continuousLearningDetail')}
+                    </Typography>
                   </AccordionDetails>
                 </Accordion>
                 <Accordion sx={{ p: 0, mb: 2 }}>
@@ -167,52 +176,50 @@ export default function AboutMe() {
                     id="panel2-header"
                   >
                     <Typography variant="body1">
-                  What are my career goals?<br />
+                      {t('aboutMe.careerGoals')}<br />
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography variant="body2">
-                    I am eager to work in dynamic environments that drive
-                  innovation, bringing my technical skills, creativity, and team collaboration
-                  abilities to make a substantial impact. I look forward to contributing to meaningful
-                  projects that propel innovation and make a difference. Let's embark on this journey
-                  together and explore how we can create innovative solutions that shape the
-                  future.
+                      {t('aboutMe.careerGoalsDetail')}
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
               </Paper>
               <Paper elevation={4} sx={{ p: 2, mb: 2 }}>
-                <Typography variant="h6" gutterBottom>Projects</Typography>
+                <Typography variant="h6" gutterBottom>{t('aboutMe.projects')}</Typography>
                 <Typography variant="subtitle2" gutterBottom>
-                  Bachelor Thesis:
+                  {t('aboutMe.bachelorThesis')}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Concept for the implementation of NFT-based certificates of authenticity
+                  {t('aboutMe.bachelorThesisDetail')}
                 </Typography>
                 <Typography variant="body2">
                   <ul>
-                    <li>Research NFT technology for stronger customer loyalty in the company</li>
-                    <li>Analyze and propose implementation options</li>
-                    <li>Create a step-by-step implementation guide for the company</li>
-                  </ul></Typography>
-                <Link variant="body2" href={practicalProjectURL} target="_blank" sx={{ zIndex: 2, }}>
-                  More details...
-                </Link><br /><br />
+                    {t('aboutMe.bachelorThesisTasks').split(', ').map((task) => (
+                      <li key={task}>{task}</li>
+                    ))}
+                  </ul>
+                </Typography>
+                <Link variant="body2" href={practicalProjectURL} target="_blank" sx={{ zIndex: 2 }}>
+                  {t('aboutMe.moreDetails')}
+                </Link>
+                <br /><br />
                 <Typography variant="subtitle2" gutterBottom>
-                  Practical Project:
+                  {t('aboutMe.practicalProject')}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Strategic analysis and optimization of the ERP data model
+                  {t('aboutMe.practicalProjectDetail')}
                 </Typography>
                 <Typography variant="body2">
                   <ul>
-                    <li>Visualize the data flow of business processes</li>
-                    <li>Carry out requirements analysis</li>
-                    <li>Propose system improvements</li>
-                  </ul></Typography>
-                <Link variant="body2" href={bachelorProjectURL} target="_blank" sx={{ zIndex: 2, }}>
-                  More details...
+                    {t('aboutMe.practicalProjectTasks').split(', ').map((task) => (
+                      <li key={task}>{task}</li>
+                    ))}
+                  </ul>
+                </Typography>
+                <Link variant="body2" href={bachelorProjectURL} target="_blank" sx={{ zIndex: 2 }}>
+                  {t('aboutMe.moreDetails')}
                 </Link>
               </Paper>
               <Grid item xs={12} md={4}>
@@ -220,7 +227,7 @@ export default function AboutMe() {
             </Grid>
           </Grid>
         </Container>
-      </main >
-    </Layout >
+      </main>
+    </Layout>
   );
 }

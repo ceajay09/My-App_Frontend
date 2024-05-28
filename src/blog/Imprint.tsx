@@ -7,14 +7,17 @@ import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useTranslation } from 'react-i18next';
 
 
 export default function Imprint() {
+  const { t } = useTranslation();
+
   return (
     <Layout>
       <Container maxWidth="lg">
         <Typography variant="h3" align="center" paddingTop={2} gutterBottom>
-          Imprint
+        {t('imprint.title')}
         </Typography>
         <Accordion sx={{ p: 0, mb: 2 }}>
           <AccordionSummary
@@ -23,12 +26,12 @@ export default function Imprint() {
             id="panel1-header"
           >
             <Typography variant="subtitle1" gutterBottom sx={{ textDecoration: 'underline' }}>
-              Purpose of the Website
+            {t('imprint.purpose.title')}
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
           <Typography variant="body2" paragraph sx={{ fontStyle: 'italic' }}>
-              This website is designed to offer insights into the construction of the site itself and to introduce you to who I am.
+          {t('imprint.purpose.text')}
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -39,7 +42,7 @@ export default function Imprint() {
             id="panel1-header"
           >
             <Typography variant="subtitle1" gutterBottom sx={{ textDecoration: 'underline' }}>
-              Contact Information
+            {t('imprint.contactInformation.title')}
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -47,22 +50,22 @@ export default function Imprint() {
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={3} md={2} lg={1}>
                   <Typography variant="body2" paragraph sx={{ fontStyle: 'italic' }}>
-                    Owner:
+                  {t('imprint.contactInformation.owner')}
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sm={9} md={10} lg={11}>
                   <Typography variant="body2" paragraph sx={{ fontStyle: 'italic' }}>
-                    César Jaquiéry
+                  {t('imprint.contactInformation.ownerName')}
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sm={3} md={2} lg={1}>
                   <Typography variant="body2" paragraph sx={{ fontStyle: 'italic' }}>
-                    Email:
+                  {t('imprint.contactInformation.email')}
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sm={9} md={10} lg={11}>
                   <Typography variant="body2" paragraph sx={{ fontStyle: 'italic' }}>
-                    c.jaquiery@gmail.com
+                  {t('imprint.contactInformation.emailAddress')}
                   </Typography>
                 </Grid>
               </Grid>
@@ -75,12 +78,12 @@ export default function Imprint() {
             id="panel1-header"
           >
             <Typography variant="subtitle1" gutterBottom sx={{ textDecoration: 'underline' }}>
-              Disclaimer
+            {t('imprint.disclaimer.title')}
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body2" paragraph sx={{ fontStyle: 'italic' }}>
-              Information on this website is reviewed regularly but cannot guarantee its completeness, accuracy, or currentness.
+            {t('imprint.disclaimer.text')}
             </Typography>
           </AccordionDetails>
         </Accordion>

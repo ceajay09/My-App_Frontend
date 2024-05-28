@@ -15,61 +15,63 @@ import Imprint from './Imprint';
 import { Link as RouterLink } from 'react-router-dom';
 import Layout from './Layout';
 import { useState } from 'react';
-
-const sections = [
-  { title: 'About Me', url: '#' },
-  { title: 'About This Website', url: '#' },
-  { title: 'Tech Insights', url: '#' },
-  { title: 'Latest Posts', url: '#' },
-  { title: 'Contact Me', url: '#' },
-  { title: 'Imprint', url: '/imprint' },
-];
-
-const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
-  description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently ",
-  image: `${process.env.PUBLIC_URL}/assets/Screenshot-CV-2.png`,
-  imageText: 'main image description',
-  linkText: 'See full CV...',
-};
-
-const featuredPosts = [
-  {
-    title: 'My New Website Is Live Now!',
-    date: 'Apr 22',
-    description:
-      "I’m excited to launch my new website! Here, I'll share my coding journey, insights on tech innovations, and more. Let’s explore together.",
-    image: 'https://source.unsplash.com/random?wallpapers', //TODO: Change image in Screenshot from landing page
-    imageLabel: 'Image Text',
-    url: '/aboutThisWebsite',
-  },
-  {
-    title: "Get in Touch: Let's Connect!",
-    date: 'Apr 22',
-    description:
-      "Newly graduated and passionate about Java, eager for projects and skill growth. Ready to innovate with your team. Let's connect!",
-    image: 'https://source.unsplash.com/random?wallpapers', //TODO: New Image
-    imageLabel: 'Image Text',
-    url: '/aboutMe',
-  },
-];
-
-const sidebar = {
-  title: 'Who I Am',
-  description:
-    "28-year-old Business Information FH graduate interested in technology. I am continuously learning and ready to take on responsibility and explore new opportunities.",
-  social: [
-    { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/ceajay09' },
-    { name: 'LinkedIn', icon: LinkedInIcon, url: 'https://linkedin.com/in/cesar-jaquiéry-9215aa179' }
-  ],
-};
+import AboutMe from './AboutMe';
+import { useTranslation } from 'react-i18next';
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
+
 export default function Blog() {
+  const { t } = useTranslation();
   const [posts, setPosts] = useState([]);
+
+
+  const sections = [
+    { title: 'About Me', url: '#' },
+    { title: 'About This Website', url: '#' },
+    { title: 'Tech Insights', url: '#' },
+    { title: 'Latest Posts', url: '#' },
+    { title: 'Contact Me', url: '#' },
+    { title: 'Imprint', url: '/imprint' },
+  ];
+
+  const mainFeaturedPost = {
+    title: t('blog.mainFeaturedPost.title'),
+    description: t('blog.mainFeaturedPost.description'),
+    image: `${process.env.PUBLIC_URL}/assets/Screenshot-CV-2.png`,
+    imageText: t('blog.mainFeaturedPost.imageText'),
+    linkText: t('blog.mainFeaturedPost.linkText'),
+  };
+
+  const featuredPosts = [
+    {
+      title: t('blog.featuredPost1.title'),
+      date: t('blog.featuredPost1.date'),
+      description: t('blog.featuredPost1.description'),
+      image: `${process.env.PUBLIC_URL}/assets/My-App-diagrams.drawio.svg`,
+      imageLabel: t('blog.featuredPost1.imageLabel'),
+      url: '/aboutThisWebsite',
+    },
+    {
+      title: t('blog.featuredPost2.title'),
+      date: t('blog.featuredPost2.date'),
+      description: t('blog.featuredPost2.description'),
+      image: `${process.env.PUBLIC_URL}/assets/Screenshot-AboutMe.png`,
+      imageLabel: t('blog.featuredPost2.imageLabel'),
+      url: '/aboutMe',
+    },
+  ];
+
+  const sidebar = {
+    title: t('blog.sidebar.title'),
+    description: t('blog.sidebar.description'),
+    social: [
+      { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/ceajay09' },
+      { name: 'LinkedIn', icon: LinkedInIcon, url: 'https://linkedin.com/in/cesar-jaquiéry-9215aa179' }
+    ],
+  };
+
   return (
     <Layout>
       <main>
@@ -80,7 +82,7 @@ export default function Blog() {
           ))}
         </Grid>
         <Grid container spacing={5} sx={{ mt: 3 }}>
-          <Main title="Latest blog posts" posts={posts} />
+          <Main title={t('blog.mainFeaturedPost.title')} posts={posts} />
           <Sidebar
             title={sidebar.title}
             description={sidebar.description}
