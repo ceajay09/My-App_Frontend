@@ -6,46 +6,49 @@ import Header from './Header';
 import Footer from './Footer';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { useTranslation } from 'react-i18next';
 
 interface LayoutProps {
-    children: ReactNode;
-  }
-
-const sections = [
-  { title: 'Home', url: '/' },
-  { title: 'About Me', url: '/aboutMe' },
-  { title: 'About This Website', url: '/aboutThisWebsite' },
-  // { title: 'Tech Insights (Coming soon)', url: '/techInsights' },
-  // { title: 'Latest Posts (Coming soon)', url: '/latestPosts' },
-  // { title: 'Contact Me (Coming soon)', url: '/contactMe' },
-  { title: 'Imprint', url: '/imprint' },
-];
+  children: ReactNode;
+}
 
 // TODO: Passen Sie theme nach Bedarf an
 const defaultTheme = createTheme();
 
-let GitHub = {
-  name: 'GitHub',
-  icon: GitHubIcon,
-  url: 'https://github.com/ceajay09'
-}
-
-let LinkedIn = {
-  name: 'LinkedIn',
-  icon: LinkedInIcon,
-  url: 'https://linkedin.com/in/cesar-jaquiéry-9215aa179'
-}
-
 const Layout = ({ children }: LayoutProps) => {
+  const { t } = useTranslation();
+
+  const sections = [
+    { title: t('layout.sections.home'), url: '/' },
+    { title: t('layout.sections.aboutMe'), url: '/aboutMe' },
+    { title: t('layout.sections.aboutThisWebsite'), url: '/aboutThisWebsite' },
+    // { title: 'Tech Insights (Coming soon)', url: '/techInsights' },
+    // { title: 'Latest Posts (Coming soon)', url: '/latestPosts' },
+    // { title: 'Contact Me (Coming soon)', url: '/contactMe' },
+    { title: t('layout.sections.imprint'), url: '/imprint' },
+  ];
+  
+  let GitHub = {
+    name: 'GitHub',
+    icon: GitHubIcon,
+    url: 'https://github.com/ceajay09'
+  }
+  
+  let LinkedIn = {
+    name: 'LinkedIn',
+    icon: LinkedInIcon,
+    url: 'https://linkedin.com/in/cesar-jaquiéry-9215aa179'
+  }
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Welcome to César's Webpage" sections={sections} />
+        <Header title={t('layout.headerTitle')} sections={sections} />
         <main>{children}</main>
         <Footer
-          title="Connect With Me"
-          description="From inquiries to collaborations, I'm just a message away."
+          title={t('layout.footer.title')}
+          description={t('layout.footer.description')}
         />
       </Container>
     </ThemeProvider>

@@ -5,6 +5,8 @@ import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import Box from '@mui/material/Box';
+import { useTranslation } from 'react-i18next';
 
 interface FeaturedPostProps {
   post: {
@@ -19,6 +21,7 @@ interface FeaturedPostProps {
 
 export default function FeaturedPost(props: FeaturedPostProps) {
   const { post } = props;
+  const { t } = useTranslation();
 
   return (
     <Grid item xs={12} md={6}>
@@ -35,12 +38,12 @@ export default function FeaturedPost(props: FeaturedPostProps) {
               {post.description}
             </Typography>
             <Typography variant="subtitle1" color="primary">
-              Learn more...
+              {t('featuredPost.linkText')}
             </Typography>
           </CardContent>
           <CardMedia
             component="img"
-            sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+            sx={{ width: 190, display: { xs: 'none', sm: 'block' } }}
             image={post.image}
             alt={post.imageLabel}
           />
