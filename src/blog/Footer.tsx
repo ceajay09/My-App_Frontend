@@ -10,7 +10,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-       Material UI SAS, trading as MUI
+        Material UI SAS, trading as MUI
       </Link>{' '}
       {new Date().getFullYear()}
       {'. '}
@@ -51,7 +51,10 @@ export default function Footer(props: FooterProps) {
               color="text.secondary"
               component="p"
             >
-              {description}
+              {/* {description} */}
+              <Link href="mailto:c.jaquiery@gmail.com">
+                c.jaquiery@gmail.com
+              </Link>
             </Typography>
           </Grid>
           <Grid item xs>

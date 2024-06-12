@@ -125,7 +125,7 @@
     }
   },
   "layout": {
-    "headerTitle": "Willkommen auf Césars Webseite",
+    "headerTitle": "Césars Webseite",
     "sections": {
       "home": "Startseite",
       "aboutMe": "Über mich",
@@ -133,7 +133,7 @@
       "imprint": "Impressum"
     },
     "footer": {
-      "title": "Kontakt",
+      "title": "Kontaktieren Sie mich",
       "description": "Kontaktieren Sie mich über LinkedIn oder Mail"
     },
     "socialLinks": {
