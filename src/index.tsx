@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import HttpApi from 'i18next-http-backend';
+import { LanguageProvider } from './LanguageContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,9 +14,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   // TODO: Strict mode and double rendering: Strict mode executes some operations twice in order to detect side effects (such as unintentional state mutations). This also includes calling useEffect cleanup functions and initializations twice in the development environment, but this does not happen in the production environment.
-  <React.StrictMode> 
+  <React.StrictMode>
     <I18nextProvider i18n={i18n}>
-      <App />
+      <LanguageProvider>
+        <App />
+      </LanguageProvider>
     </I18nextProvider>
   </React.StrictMode>
 );
