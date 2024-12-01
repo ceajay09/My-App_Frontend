@@ -16,13 +16,13 @@
     "interestList": "Small private IT projects, Climbing, Hiking, Water sports, Diving",
     "hello": "Hello, it's me César",
     "techJourney": "How did I begin my tech journey?",
-    "techJourneyDetail": "From a young age, I have been fascinated by the world of IT. My experience as a working student at a renowned pharmaceutical company enhanced my understanding of modern technologies and process optimization, deepening my interest in the field. During my studies in Business Informatics, where I focused on programming modules, I actively engaged in practical projects with companies as clients, eagerly taking on responsibilities and applying theoretical knowledge in real-world settings.",
+    "techJourneyDetail": "From a young age, I have been fascinated by the world of IT. My experience as a working student at a renowned pharmaceutical company enhanced my understanding of modern technologies and process optimization, deepening my interest in the field. During my studies in Business Informatics, where I focused on programming modules, I actively engaged in practical projects with companies as clients, eagerly taking on responsibilities and applying theoretical knowledge in real-world settings. With my employer Opacc, I can take on new responsibilities and deepen my programming experience in the use of scripts.",
     "keySkills": "What key skills have I developed?",
     "keySkillsDetail": "My diverse work experience allowed me to gain valuable knowledge and expand my understanding of different programming languages by writing scripts. It also deepened my interest in IT as I worked at the intersection of business and technology. During my civil service in IT support, I acquired comprehensive knowledge about diverse systems and their interactions, further solidifying my technical foundation. This experience was particularly enriching during a ransomware attack, which provided significant insights into how systems can interact and work together under crisis scenarios.",
     "continuousLearning": "What motivates my continuous learning?",
     "continuousLearningDetail": "I regularly engage in private projects to explore new technologies and consolidate my existing knowledge, like creating this webpage using AWS to understand its functionalities in practice. I always strive to extend my expertise by reading technical books, particularly on topics such as Design Patterns. My journey in software development is not just about acquiring knowledge; it's about applying what I learn to solve real-world problems. I am constantly seeking opportunities to grow professionally and take on responsibilities in specific areas of expertise.",
     "careerGoals": "What are my career goals?",
-    "careerGoalsDetail": "I am eager to work in dynamic environments that drive innovation, bringing my technical skills, creativity, and team collaboration abilities to make a substantial impact. I look forward to contributing to meaningful projects that propel innovation and make a difference. Let's embark on this journey together and explore how we can create innovative solutions that shape the future.",
+    "careerGoalsDetail": "I am eager to work in dynamic environments that drive innovation, bringing my technical skills, creativity, and team collaboration abilities to make a substantial impact. I look forward to contributing to meaningful projects that propel innovation and make a difference. In Opacc, I have found an employer where I can continue to develop myself and apply the knowledge and experience gained during my studies.",
     "projects": "Projects",
     "bachelorThesis": "Bachelor Thesis:",
     "bachelorThesisDetail": "Concept for the implementation of NFT-based certificates of authenticity",
@@ -46,14 +46,14 @@
       "imageLabel": "Diagram AWS Infrastructure"
     },
     "featuredPost2": {
-      "title": "Get in Touch: Let's Connect!",
-      "date": "Apr 22",
-      "description": "Newly graduated and passionate about Java, eager for projects and skill growth. Ready to innovate with your team. Let's connect soon!",
+      "title": "Discover My Journey!",
+      "date": "Dec 01",
+      "description": "ERP Project Manager with a focus on process customization and programming. Explore more about my skills and journey.",
       "imageLabel": "Screenshot AboutMe-Tab"
     },
     "sidebar": {
       "title": "Who I Am",
-      "description": "28-year-old Business Information FH graduate interested in technology. I am continuously learning and ready to take on responsibility and explore new opportunities."
+      "description": "28-year-old Business Information FH graduate and ERP Project Manager interested in technology. I am continuously learning and ready to take on responsibility and explore new opportunities."
     }
   },
   "aboutThisWebsite": {
@@ -73,7 +73,7 @@
     },
     "awsInfrastructure": {
       "title": "AWS Infrastructure",
-      "text": "The deployment architecture on AWS consists of two EC2 instances with load balancing to optimize load distribution and enhance availability. An HTTPS certificate on AWS ensures that all data transferred between the user and the server is securely encrypted."
+      "text": "Initially, the deployment architecture on AWS consisted of two EC2 instances with load balancing to optimize load distribution and enhance availability. Recently, I transitioned to Fargate to reduce costs while maintaining performance and scalability. An HTTPS certificate on AWS ensures that all data transferred between the user and the server is securely encrypted."
     },
     "frontendDevelopment": {
       "title": "Frontend Development",
@@ -135,7 +135,7 @@
       "imprint": "Imprint"
     },
     "footer": {
-      "title": "Connect With Me",
+      "title": "Contact",
       "description": "I'm just a message away."
     },
     "socialLinks": {
