@@ -15,13 +15,13 @@
     "interestList": "Kleine private IT-Projekte, Klettern, Wandern, Wassersport, Tauchen",
     "hello": "Wer bin ich?",
     "techJourney": "Wie begann meine Reise?",
-    "techJourneyDetail": "Schon in jungen Jahren war ich von der Welt der IT fasziniert. Meine Erfahrungen als Werkstudent bei einem renommierten Pharmaunternehmen vertieften mein Verständnis für moderne Technologien und Prozessoptimierung, was mein Interesse in diesem Bereich verstärkte. Während meines Studiums in der Wirtschaftsinformatik, bei dem ich mich auf Programmiermodule konzentrierte, engagierte ich mich aktiv in praktischen Projekten mit Unternehmen als Kunden, übernahm gerne Verantwortung und setzte theoretisches Wissen in realen Situationen um.",
+    "techJourneyDetail": "Schon in jungen Jahren war ich von der Welt der IT fasziniert. Meine Erfahrungen als Werkstudent bei einem renommierten Pharmaunternehmen vertieften mein Verständnis für moderne Technologien und Prozessoptimierung, was mein Interesse in diesem Bereich verstärkte. Während meines Studiums in der Wirtschaftsinformatik, bei dem ich mich auf Programmiermodule konzentrierte, engagierte ich mich aktiv in praktischen Projekten mit Unternehmen als Kunden, übernahm gerne Verantwortung und setzte theoretisches Wissen in realen Situationen um. Mit meinem Arbeitgeber Opacc, kann ich neue Verantwortungen übernehmen und meine Programmiererfahrung in der Anwendung von Skripten vertiefen.",
     "keySkills": "Welche Fähigkeiten habe ich entwickelt?",
     "keySkillsDetail": "Meine vielfältigen Berufserfahrungen ermöglichten es mir, wertvolle Kenntnisse zu sammeln und mein Verständnis für verschiedene Programmiersprachen durch das Schreiben von Skripten zu erweitern. Mein Interesse an der IT vertiefte sich weiter, da ich an der Schnittstelle von Wirtschaft und Technologie arbeitete. Während meines Zivildienstes im IT-Support erwarb ich umfassendes Wissen über verschiedene Systeme und deren Interaktionen, was meine technische Grundlage weiter festigte. Diese Erfahrung war besonders bereichernd während eines Ransomware-Angriffs, der bedeutende Einblicke in die Interaktion und Zusammenarbeit von Systemen in Krisensituationen bot.",
     "continuousLearning": "Was motiviert mein kontinuierliches Lernen?",
     "continuousLearningDetail": "Ich beschäftige mich regelmässig mit privaten Projekten, um neue Technologien zu erkunden und mein bestehendes Wissen zu festigen, wie zum Beispiel die Erstellung dieser Webseite mit AWS, um deren Funktionen in der Praxis zu verstehen. Ich bemühe mich stets, mein Fachwissen durch das Lesen technischer Bücher zu erweitern, insbesondere zu Themen wie Design Patterns. Mein Weg in der Softwareentwicklung dreht sich nicht nur um den Erwerb von Wissen, sondern auch darum, das Gelernte zur Lösung realer Probleme anzuwenden. Ich suche ständig nach Möglichkeiten, mich beruflich weiterzuentwickeln und Verantwortung in bestimmten Fachgebieten zu übernehmen.",
     "careerGoals": "Was sind meine beruflichen Ziele?",
-    "careerGoalsDetail": "Ich strebe danach, in dynamischen Umgebungen zu arbeiten, die Innovationen vorantreiben, und bringe meine technischen Fähigkeiten, Kreativität und Teamfähigkeit ein, um einen bedeutenden Beitrag zu leisten. Ich freue mich darauf, zu bedeutenden Projekten beizutragen, die Innovation vorantreiben und einen Unterschied machen. Lassen Sie uns gemeinsam diese Reise antreten und erkunden, wie wir innovative Lösungen schaffen können, die die Zukunft gestalten.",
+    "careerGoalsDetail": "Ich strebe danach, in dynamischen Umgebungen zu arbeiten, die Innovationen vorantreiben, und bringe meine technischen Fähigkeiten, Kreativität und Teamfähigkeit ein, um einen bedeutenden Beitrag zu leisten. Ich freue mich darauf, zu bedeutenden Projekten beizutragen, die Innovation vorantreiben und einen Unterschied machen. Mit Opacc habe ich einen Arbeitgeber gefunden, in dem ich mich weiterentwickeln kann und meine Erfahrungen aus dem Studium zur Anwendung bringen darf.",
     "projects": "Projekte",
     "bachelorThesis": "Bachelorarbeit:",
     "bachelorThesisDetail": "Konzept zur Implementierung von NFT-basierten Echtheitszertifikaten",
@@ -43,14 +43,14 @@
       "imageLabel": "Diagramm AWS Infrastruktur"
     },
     "featuredPost2": {
-      "title": "Get in Touch: Let's Connect!",
-      "date": "22. Apr",
-      "description": "Frisch diplomierter und leidenschaftlicher Entwickler, bereit für neue Projekte und Herausforderungen. Kontaktieren Sie mich.",
+      "title": "Mein beruflicher Werdegang",
+      "date": "30. Dez",
+      "description": "ERP-Projektleiter mit Fokus auf Prozessanpassung und Programmierung. Erfahren Sie mehr über meine Fähigkeiten.",
       "imageLabel": "Screenshot AboutMe-Tab"
     },
     "sidebar": {
       "title": "Wer bin ich",
-      "description": "28-jähriger Wirtschaftsinformatik-Absolvent (FH) mit grossem Interesse an der Technik. Ich bin motiviert neues zu Lernen, Verantwortung zu übernehmen und neue Möglichkeiten zu nutzen."
+      "description": "28-jähriger Wirtschaftsinformatik-Absolvent (FH) und ERP-Projektleiter mit grossem Interesse an der Technik. Ich bin motiviert neues zu Lernen, Verantwortung zu übernehmen und neue Möglichkeiten zu nutzen."
     }
 
   }, 
@@ -71,7 +71,7 @@
     },
     "awsInfrastructure": {
       "title": "AWS-Infrastruktur",
-      "text": "Die Bereitstellungsarchitektur auf AWS besteht aus zwei EC2-Instanzen mit einem Load-Balancer, um die Lastverteilung zu optimieren und die Verfügbarkeit zu erhöhen. Ein HTTPS-Zertifikat auf AWS stellt sicher, dass alle zwischen dem Benutzer und dem Server übertragenen Daten sicher verschlüsselt sind."
+      "text": "Ursprünglich bestand die Bereitstellungsarchitektur auf AWS aus zwei EC2 Instanzen mit einem Load-Balancer, um die Lastverteilung zu optimieren und die Verfügbarkeit zu erhöhen. Kürzlich wurde auf auf Fargate umgestiegen, um die Kosten zu senken und gleichzeitig die Leistung und Skalierbarkeit zu erhalten. Ein HTTPS-Zertifikat auf AWS stellt sicher, dass alle zwischen dem Benutzer und dem Server übertragenen Daten sicher verschlüsselt sind."
     },
     "frontendDevelopment": {
       "title": "Frontend-Entwicklung",
@@ -133,7 +133,7 @@
       "imprint": "Impressum"
     },
     "footer": {
-      "title": "Kontaktieren Sie mich",
+      "title": "Kontakt",
       "description": "Kontaktieren Sie mich über LinkedIn oder Mail"
     },
     "socialLinks": {
