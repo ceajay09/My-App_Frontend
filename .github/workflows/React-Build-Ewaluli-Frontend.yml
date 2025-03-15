@@ -28,6 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: Ewaluli/package-lock.json
     - run: |
         cd Ewaluli
         npm ci --legacy-peer-deps
