@@ -28,6 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: cesarjaquiery.ch/package-lock.json
     - run: |
         cd cesarjaquiery.ch
         npm ci --legacy-peer-deps
