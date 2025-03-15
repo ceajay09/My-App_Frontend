@@ -28,8 +28,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci --legacy-peer-deps
-    - run: CI=false npm run build --if-present #Check warnings
+    - run: |
+        cd cesarjaquiery.ch
+        npm ci --legacy-peer-deps
+    - run: |
+        cd cesarjaquiery.ch
+        CI=false npm run build --if-present 
       env:
         REACT_APP_API_URL: ${{ '' }} #Empty String
 
