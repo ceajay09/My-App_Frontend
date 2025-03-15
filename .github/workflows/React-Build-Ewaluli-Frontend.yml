@@ -28,8 +28,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci --legacy-peer-deps
-    - run: CI=false npm run build --if-present #Check warnings
+    - run: |
+        cd Ewaluli
+        npm ci --legacy-peer-deps
+    - run: |
+        cd Ewaluli
+        CI=false npm run build --if-present 
       env:
         REACT_APP_API_URL: ${{ '' }} #Empty String
 
@@ -81,6 +85,7 @@ jobs:
         run: |
           ls -la
           echo $REGISTRY/$REPOSITORY:$IMAGE_TAG
+          cd Ewaluli
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
     
