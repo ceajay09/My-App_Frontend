@@ -12,7 +12,7 @@ on:
     branches:
       - main
     paths:
-      - 'cesarjaquiery.ch/**'
+      - 'My-App_Frontend/**'
 
 jobs:
 
@@ -28,12 +28,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: cesarjaquiery.ch/package-lock.json
+        cache-dependency-path: My-App_Frontend/package-lock.json
     - run: |
-        cd cesarjaquiery.ch
+        cd My-App_Frontend
         npm ci --legacy-peer-deps
     - run: |
-        cd cesarjaquiery.ch
+        cd My-App_Frontend
         CI=false npm run build --if-present 
       env:
         REACT_APP_API_URL: ${{ '' }} #Empty String
@@ -42,7 +42,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: frontend-react
-        path: cesarjaquiery.ch/build
+        path: My-App_Frontend/build
 
   push-to-aws:
     needs: build-react
@@ -57,7 +57,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: frontend-react
-          path: cesarjaquiery.ch/build
+          path: My-App_Frontend/build
 
 
 
@@ -86,7 +86,7 @@ jobs:
         run: |
           ls -la
           echo $REGISTRY/$REPOSITORY:$IMAGE_TAG
-          cd cesarjaquiery.ch
+          cd My-App_Frontend
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
     
